@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <body>
-    <h1>Parcel Price:</h1>
+    <h1>Your Package Report</h1>
+    <p>Thanks for shipping with us!</p>
+    <p><strong>Your package volume:</strong> @Model.Volume() cu. inches.</p>
+    <p><strong>Your price today:</strong> $@Model.GetPrice()</p>
   </body>
 </html>

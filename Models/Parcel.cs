@@ -9,12 +9,13 @@ namespace ShippingCalculator.Models
 
     public int GetLength()
     {
+
       return _length;
     }
 
-    public void SetLength(int newLength)
+    public void SetLength(string newLength)
     {
-      _length = newLength;
+      _length = int.Parse(newLength);
     }
 
     public int GetWidth()
@@ -22,9 +23,9 @@ namespace ShippingCalculator.Models
       return _width;
     }
 
-    public void SetWidth(int newWidth)
+    public void SetWidth(string newWidth)
     {
-      _width = newWidth;
+      _width = int.Parse(newWidth);
     }
 
     public int GetHeight()
@@ -32,9 +33,9 @@ namespace ShippingCalculator.Models
       return _height;
     }
 
-    public void SetHeight(int newHeight)
+    public void SetHeight(string newHeight)
     {
-      _height = newHeight;
+      _height = int.Parse(newHeight);
     }
 
     public int GetWeight()
@@ -42,9 +43,9 @@ namespace ShippingCalculator.Models
       return _weight;
     }
 
-    public void SetWeight(int newWeight)
+    public void SetWeight(string newWeight)
     {
-      _weight = newWeight;
+      _weight = int.Parse(newWeight);
     }
 
     public int Volume()
@@ -52,11 +53,10 @@ namespace ShippingCalculator.Models
       return _width * _height * _length;
     }
 
-    public int CostToShip()
+    public double GetPrice()
     {
-      return 
+      return (_weight * 0.2) + (Volume() * 0.05);
     }
-
 
   }
 }
